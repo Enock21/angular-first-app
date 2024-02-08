@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import {HousingLocationComponent} from '../housing-location/housing-location.component';
+import {HousingLocation} from '../housinglocation';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [HousingLocationComponent],
   template: `
     <section>
       <form>
@@ -12,10 +14,15 @@ import { Component } from '@angular/core';
           Search
         </button>
       </form>
+      <section class="results">
+        <app-housing-location>
+          
+        </app-housing-location>
+      </section>
     </section>
   `,
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-
+  readonly baseUrl = 'https://angular.io/assets/images/tutorials/faa';
 }
