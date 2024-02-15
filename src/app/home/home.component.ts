@@ -6,20 +6,23 @@ import {HousingLocation} from '../housingLocation';
   selector: 'app-home',
   standalone: true,
   imports: [HousingLocationComponent],
-  template: `
+  template: 
+  `
     <section>
       <form>
-        <input type="text" placeholder="Filter by city">
-        <button class="primary" type="button">
+          <input type="text" placeholder="Filter by city">
+          <button class="primary" type="button">
           Search
-        </button>
+          </button>
       </form>
       <section class="results">
-        <app-housing-location>
+          <app-housing-location>
           
-        </app-housing-location>
+          </app-housing-location>
       </section>
     </section>
+
+    <app-housing-location [housingLocation]="housingLocation"></app-housing-location>
   `,
   styleUrl: './home.component.css'
 })

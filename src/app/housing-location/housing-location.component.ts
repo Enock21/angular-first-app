@@ -5,10 +5,13 @@ import { HousingLocation } from '../housingLocation';
   selector: 'app-housing-location',
   standalone: true,
   imports: [],
-  template: `
-    <p>
-      housing-location works!
-    </p>
+  template:
+  `
+    <section class="listing">
+      <img class="listing-photo" [src]="housingLocation.photo" alt="Exterior photo of {{housingLocation.name}}">
+      <h2 class="listing-heading">
+      </h2>
+    </section>
   `,
   styleUrl: './housing-location.component.css'
 })
