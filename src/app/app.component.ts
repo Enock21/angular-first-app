@@ -5,7 +5,8 @@ import { HomeComponent } from './home/home.component';
   selector: 'app-root',
   standalone: true,
   imports: [ HomeComponent ],
-  template:`
+  template:
+  `
     <main>
       <header class="brand-name">
         <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true">
