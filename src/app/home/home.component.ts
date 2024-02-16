@@ -7,24 +7,7 @@ import {HousingLocation} from '../housingLocation';
   standalone: true,
   imports: [HousingLocationComponent],
   template: 
-  `
-    <section>
-      <form>
-          <input type="text" placeholder="Filter by city">
-          <button class="primary" type="button">
-          Search
-          </button>
-      </form>
-      <section class="results">
-          <app-housing-location>
-          
-          </app-housing-location>
-      </section>
-    </section>
-
-    <app-housing-location [housingLocation]="housingLocation"></app-housing-location>
-  `,
-  styleUrl: './home.component.css'
+  `<app-housing-location [housingLocation]="housingLocation"></app-housing-location>`
 })
 
 export class HomeComponent {
@@ -36,7 +19,7 @@ export class HomeComponent {
     name: 'Test Home',
     city: 'Test City',
     state: 'ST',
-    photo: '${this.baseUrl}/example-house.jpg',
+    photo: `${this.baseUrl}/example-house.jpg`,
     availableUnits: 99,
     wifi: true,
     laundry: false
